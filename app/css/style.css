@@ -1,0 +1,10 @@
+body {
+    margin: 1% 0 3% 0;
+}
+
+#foot {
+    margin-bottom: 3%;
+    background-color: black;
+    display: block;
+    font-size: 40px;
+}
