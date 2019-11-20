@@ -1,13 +1,14 @@
 var path = require('path')
 
-var htmlRouter = require('express').Router()
+var htmlRouter = require('express')
 
-htmlRouter.get('/survey', function(req, res) {
-    res.sendFile(path.join(__dirname, '../public/survey.html'))
-})
+module.exports = function(app) {
 
-htmlRouter.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../public/home.html'))
-})
+    app.get('/survey', function(req, res) {
+        res.sendFile(path.join(__dirname, '../public/survey.html'))
+    })
 
-module.exports = htmlRouter
+    app.get('*', function(req, res) {
+        res.sendFile(path.join(__dirname, '../public/home.html'))
+    })
+}

@@ -1,31 +1,31 @@
 var friends = [{
         name: "Tom",
-        photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjf_-SYrublAhWGoJ4KHVmHANAQjRx6BAgBEAQ&url=https%3A%2F%2Ftwitter.com%2Fmyspacetom&psig=AOvVaw2UmU_bIBdAnXH9vg56yKZP&ust=1573706092048007",
-        scores: [5, 1, 5, 3, 1]
+        photo: "https://pbs.twimg.com/profile_images/1237550450/mstom_400x400.jpg",
+        scores: [5, 1, 5, 3, 1, 1, 1, 4, 3, 2]
     },
     {
         name: "Eugene",
-        photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiAuM3XrublAhWNjp4KHSinAIYQjRx6BAgBEAQ&url=https%3A%2F%2Fscratch.mit.edu%2Fusers%2FBigRon101%2F&psig=AOvVaw0bqg0lUPAC1vcQzc-AXMg7&ust=1573706221917364",
-        scores: [3, 1, 3, 1, 5]
+        photo: "https://scontent-den4-1.xx.fbcdn.net/v/t1.0-9/3925_198410355787_2869018_n.jpg?_nc_cat=109&_nc_oc=AQlECyfgQalW5nR8zQGa8L-JZ6-N-ke-QecYA0Ow5HRGVVS-ZmApYGVPh2BAv9FXdqQ&_nc_ht=scontent-den4-1.xx&oh=38c741a6a0d2b27aaa7016ee449d977c&oe=5E44BCC9",
+        scores: [3, 1, 3, 1, 5, 2, 2, 5, 3, 3]
     },
     {
         name: "Miya hee guy",
-        photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiMgrmTr-blAhWT4J4KHQ2ZBX8QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DA4A5seYJR3M&psig=AOvVaw0FF7Lqjy25KdJoPUuE_zer&ust=1573706349983239",
-        scores: [5, 5, 5, 1, 5]
+        photo: "https://thumbs.gfycat.com/CoarseDrearyCollie.webp",
+        scores: [5, 5, 5, 1, 5, 3, 3, 5, 4, 4]
     },
     {
         name: "Justice Beaver",
-        photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjuicmwr-blAhUUqZ4KHd_IBiIQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.artstation.com%2Fartwork%2F8l1dDQ&psig=AOvVaw0sbbT2J0v6tvHctNluvpfl&ust=1573706397237924",
-        scores: [1, 3, 1, 1, 1]
+        photo: "https://www.thefastlaneforum.com/community/data/avatars/o/66/66271.jpg?1554185799",
+        scores: [1, 3, 1, 1, 1, 4, 4, 1, 5, 5]
     },
     {
         name: "Gob Bluth",
-        photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiyzJ7Ir-blAhVDqZ4KHYE9BW0QjRx6BAgBEAQ&url=https%3A%2F%2Farresteddevelopment.fandom.com%2Fwiki%2FG.O.B.&psig=AOvVaw2nhbRo99h7g7Pk4ToC7Aop&ust=1573706460799347",
-        scores: [5, 1, 5, 1, 5]
+        photo: "https://vignette.wikia.nocookie.net/arresteddevelopment/images/b/b7/1x10_Pier_Pressure_%2845%29.png/revision/latest/scale-to-width-down/300?cb=20120229061749",
+        scores: [5, 1, 5, 1, 5, 5, 5, 2, 1, 1]
     }, {
         name: "Jerry Gurchich",
-        photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjGv8vLsOblAhUNeawKHZWNDsAQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.theatlantic.com%2Fentertainment%2Farchive%2F2015%2F02%2Fand-the-meek-shall-inherit-pawnee%2F385985%2F&psig=AOvVaw1SXMa-iqpGqcpVPh11hPoB&ust=1573706735872601",
-        scores: [3, 5, 1, 5, 5]
+        photo: "https://imgix.bustle.com/rehost/2016/9/13/c2545c9b-4f1c-4111-9b1e-d4a6dc02b7e6.jpg?w=970&h=546&fit=crop&crop=faces&auto=format&q=70&dpr=2",
+        scores: [3, 5, 1, 5, 5, 5, 4, 1, 2, 3]
     }
 
 

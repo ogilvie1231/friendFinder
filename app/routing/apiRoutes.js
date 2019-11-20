@@ -1,56 +1,46 @@
 var friends = require('../data/friends')
 
-var apiRouter = require('express').Router()
-
-apiRouter.get('/friends', function(req, res) {
-    res.send(friends)
-})
-
-module.exports = apiRouter
 
 
 module.exports = function(app) {
 
-    app.get("/api/friends", function(req, res) {
-        res.json(friends);
-    });
+    app.get('/api/friends', function(req, res) {
+        res.json(friends)
+    })
 
     app.post("/api/friends", function(req, res) {
-        console.log(req.body.scores);
+        var userInfo = req.body
+        var userScore = userInfo.scores
 
-        // Receive user details (name, photo, scores)
-        var user = req.body;
-        // console.log('user: ', user)
-        // parseInt for scores
-        for (var i = 0; i < user.scores.length; i++) {
-            user.scores[i] = parseInt(user.scores[i]);
+        var bestMatch = {
+            name: '',
+            photo: '',
+            score: Infinity
         }
-        console.log('user.scores: ', user.scores)
+        console.log('bestMatch: ', bestMatch)
+        for (let i = 0; i < friends.length; i++) {
+            const indiv = friends[i];
 
-        // default friend match is the first friend but result will be whoever has the minimum difference in scores
-        var bestFriendIndex = 0;
-        var minimumDifference = 40;
+            var indivScores = indiv.scores
 
-        // in this for-loop, start off with a zero difference and compare the user and the ith friend scores, one set at a time
-        //  whatever the difference is, add to the total difference
-        for (var i = 0; i < friends.length; i++) {
-            var totalDifference = 0;
-            for (var j = 0; j < friends[i].scores.length; j++) {
-                var difference = Math.abs(user.scores[j] - friends[i].scores[j]);
-                totalDifference += difference;
+            var overallScore = 0
+
+            for (let j = 0; j < indivScores.length; j++) {
+                const targetScore = indivScores[j];
+
+                overallScore += Math.abs(userScore[j] - targetScore)
+
+            }
+            if (overallScore <= bestMatch.score) {
+                bestMatch.name = indiv.name
+                bestMatch.photo = indiv.photo
+                bestMatch.score = overallScore
+
             }
 
-            // if there is a new minimum, change the best friend index and set the new minimum for next iteration comparisons
-            if (totalDifference < minimumDifference) {
-                bestFriendIndex = i;
-                minimumDifference = totalDifference;
-            }
+
         }
-
-        // after finding match, add user to friend array
-        friends.push(user);
-
-        // send back to browser the best friend match
-        res.json(friends[bestFriendIndex]);
+        friends.push(req.body)
+        res.json(bestMatch)
     });
 };

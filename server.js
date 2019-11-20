@@ -3,15 +3,12 @@ var app = express()
 
 var PORT = process.env.PORT || 8080
 
-express.json()
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-express.urlencoded({ extended: false })
+require('./app/routing/htmlRoutes.js')(app)
+require('./app/routing/apiRoutes')(app)
 
-var htmlRouter = require('./app/routing/htmlRoutes.js')
-var apiRouter = require('./app/routing/apiRoutes')
-
-app.use('/api', apiRouter)
-app.use('/', htmlRouter)
 
 app.listen(PORT, function() {
     console.log('App listening on PORT: ' + PORT)
